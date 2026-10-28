@@ -28,6 +28,8 @@ NetworkManager can also have WiFi connections that RaspAP did not create, for ex
 
 If one of these connections is for the same network as a saved RaspAP network, it shows the hint **Same network as a RaspAP network**.
 
+![Other NetworkManager connections](../images/wifi-client-nm-connections.png){: style="width:560px"}
+
 ### Limitations
 - RaspAP gives NetworkManager the 64-digit PSK of each network. It makes the PSK from the saved passphrase, which must have 8 to 63 printable ASCII characters. If a saved network has no passphrase that RaspAP can use, the page shows a warning. Enter the passphrase again and choose **Update**.
 - Networks that support only WPA3 (SAE) are not supported. Networks in WPA2/WPA3 transition mode connect with WPA2.
