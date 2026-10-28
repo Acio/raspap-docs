@@ -35,6 +35,8 @@ If one of these connections is for the same network as a saved RaspAP network, i
 ## Own hotspot
 When the device scans for networks, it also finds its own access point. The page marks this network with an **Access point** badge and the name of the AP interface. A connection of the client to the hotspot of the same device is never useful, so the card disables the passphrase field and has no **Add** button. If the network is already saved, for example from an older configuration, **Update** and **Connect** are disabled. **Delete** stays available.
 
+![Own hotspot](../images/wifi-client-own-hotspot.png){: style="width:300px"}
+
 When an access point of a different device sends the same SSID, the card shows a note that the network is also the hotspot of this device. You can then still save and connect to the network, and the page shows a warning. The client connects by SSID, so it can also select the access point of this device.
 
 There is no setting for this mark.
@@ -43,6 +45,8 @@ There is no setting for this mark.
 Sometimes the WiFi client stays connected to the uplink network, but the network does not forward traffic any more. This can occur with some hotel and public networks. The uplink watchdog finds this condition and connects the client to the network again.
 
 To turn it on, enable **Reconnect when the uplink stops working** on the WiFi client page. The watchdog is off by default. If the watchdog is not installed, the switch is not shown.
+
+![Uplink watchdog](../images/wifi-client-watchdog.png){: style="width:560px"}
 
 A systemd timer (`raspap-uplink-watchdog.timer`) runs a check every 30 seconds:
 
